@@ -9,7 +9,7 @@ const getWeather = ({latitude,longitude,location},callback) =>{
             callback('Unable to find location','','')
         }else {
             console.log(location)
-            callback('',`${body.current.weather_descriptions[0]}. It is currently ${body.current.temperature} out. It feels like ${body.current.feelslike} out at ${body.location.name}`,location)
+            callback('',`${body.current.weather_descriptions[0]}. It is currently ${body.current.temperature} out. It feels like ${body.current.feelslike} out at ${body.location.name}. Humidity is at ${body.current.humidity}.`,location)
         }
     })
 }
